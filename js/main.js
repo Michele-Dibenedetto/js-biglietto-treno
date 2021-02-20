@@ -1,11 +1,14 @@
 // eta del passeggero
-var età = prompt("inserire l'eta del passaggero");
+var età = parseInt(prompt("inserire l'eta del passaggero"));
+
 // kilometri da percorrere
-var km = prompt("inserire i kilometri da percorrere");
+var km = parseInt(prompt("inserire i kilometri da percorrere"));
+
 // calcolo prezzo del biglietto
 const euroAlKm = 0.21;
 var costoBiglietto =Math.floor(km * euroAlKm);
 console.log(costoBiglietto);
+
 // sconto biglietto
 var scontoMinorenni = costoBiglietto * 20 / 100;
 var scontoAnziani = costoBiglietto * 40 / 100;
