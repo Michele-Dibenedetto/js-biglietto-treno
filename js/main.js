@@ -15,12 +15,19 @@ var scontoAnziani = costoBiglietto * 40 / 100;
 var bigliettoScontato;
 
 // sconto in base all'eta
-if (età < 18) {
-    bigliettoScontato = costoBiglietto - scontoMinorenni;
-    alert("sei minorenne e hai accesso allo sconto del 20%, il prezzo del tuo biglietto è " + bigliettoScontato + "€")
-} else if (età > 65) {
-    bigliettoScontato = costoBiglietto - scontoAnziani;
-    alert("sei un'anziano/a e hai accesso allo sconto del 40%, il prezzo del tuo biglietto è " + bigliettoScontato + "€")
+if (isNaN(età) || isNaN(km)) {
+    alert("impossibile elaborare il prezzo del bigletto, riprova inserendo dati numerici")
 } else {
-    alert("il prezzo del tuo biglietto è " + costoBiglietto + "€")
+    if (età < 18) {
+        bigliettoScontato = costoBiglietto - scontoMinorenni;
+        alert("sei minorenne e hai accesso allo sconto del 20%, il prezzo del tuo biglietto è " + bigliettoScontato + "€")
+    } else if (età > 65) {
+        bigliettoScontato = costoBiglietto - scontoAnziani;
+        alert("sei un'anziano/a e hai accesso allo sconto del 40%, il prezzo del tuo biglietto è " + bigliettoScontato + "€")
+    } else {
+        alert("il prezzo del tuo biglietto è " + costoBiglietto + "€")
+    }
+    console.log(costoBiglietto);
+    console.log(bigliettoScontato);
 }
+    
